@@ -19,7 +19,7 @@
             var $keyboard = $("<div id='keyboard' class='keyboard'></div>");
             $keyboard.appendTo($body);
             $keyboard.css({"background-color" : this.opts.keyboardBg});
-            $keyboard.append("<div class='keyboardTop'><button id='clear' class='clear'>清空</button><h4 class='keyboardTitle'>国鑫所数字键盘</h4><button id='tabHide' class='tabHide'>完成</button></div>")
+            $keyboard.append("<div class='keyboardTop'><button id='clear' class='clear'>清空</button><h4 class='keyboardTitle'>数字键盘</h4><button id='tabHide' class='tabHide'>完成</button></div>")
             $keyboard.append("<div class='keyboardBody '><div><span id='seven' class='number' data-number='7'>7</span><span id='eight' class='number' data-number='8'>8</span><span id='nine' class='number' data-number='9'>9</span></div><div><span id='four' class='number'  data-number='4'>4</span><span id='five' class='number'  data-number='5'>5</span><span id='six' class='number'  data-number='6'>6</span></div><div><span id='one' class='number'  data-number='1'>1</span><span id='two' class='number'  data-number='2'>2</span><span id='three' class='number'  data-number='3'>3</span></div><div><span id='zero' class='number'  data-number='0'>0</span><span id='dot' class='number'  data-number='.'>.</span><span id='back' class='back'>&times;</span></div></div>");
             this.keyboard = $("#keyboard");
             this.keyboard.addClass("hide");
