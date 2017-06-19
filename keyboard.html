@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>键盘</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">  
+<style>
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body{
+	color: white;
+}
+button{
+	border:none;
+	background:transparent;
+	outline:none;
+}
+.hide{
+	display:none;
+}
+.keyboard{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	padding: 5px 10px 10px;
+}
+.keyboardTop{
+	display: flex;
+	margin-bottom: 5px;
+}
+.keyboardTop{
+	text-align: center;
+}
+.keyboardTitle{
+	flex: 5;
+	height: 32px;
+	line-height: 32px;
+}
+.tabHide,.clear{
+	flex: 2.5;
+	color: rgb(62,155,222);
+}
+.keyboardBody >div{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 5px;
+	text-align: center;
+}
+.number,.back{
+	height: 22px;
+	background: #999;
+	box-sizing: content-box;
+	line-height: 1;
+	padding: 10px;
+	width: 23%;
+}
+.number,.back{
+	border-radius: 5px;
+}
+</style>
+</head>
+<body>
+<input type="text" id="inputCur"><br>
+<input type="text" id="inputCur2"><br>
+<script src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script>
+<script src="keyboard.js"></script>
+<script>
+
+$(function(){
+	$("#inputCur").focus(function(){
+		document.activeElement.blur(); // 阻止手机默认键盘弹起
+		g_keyboard.showKeyboard();
+		g_keyboard.bindInput($(this));
+	})
+	$("#inputCur2").focus(function(){
+		document.activeElement.blur(); 
+		g_keyboard.showKeyboard();
+		g_keyboard.bindInput($(this));
+	})
+})
+
+</script>
+</body>
+</html>
